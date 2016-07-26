@@ -27,6 +27,8 @@ Route::group(["prefix" => "api/v1", "middleware" => "api"], function() {
     Route::group(["prefix" => "account", "middleware" => "auth"], function () {
         Route::get("/", "Auth\AccountsController@index");
     });
+
+    Route::resource("tasks", 'Tasks\TasksController');
 });
 
 /* Other */

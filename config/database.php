@@ -46,6 +46,18 @@ return [
 
     'connections' => [
 
+        'default' => [
+            'driver'        => 'mysql',
+            'host'            => env('DB_HOST', 'localhost'),
+            'database'    => env('DB_DEFAULT', 'default'),
+            'username'    => env('DB_USERNAME', 'root'),
+            'password'    => env('DB_PASSWORD', 'password'),
+            'charset'     => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'        => '',
+            'strict'        => false,
+        ],
+
         'world' => [
             'driver'        => 'mysql',
             'host'            => env('DB_HOST', 'localhost'),
